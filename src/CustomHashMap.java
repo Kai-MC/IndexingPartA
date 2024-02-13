@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class CustomHashMap {
     private static int capacity = 16;
     private static int numberOfItems = 0;
@@ -10,6 +8,9 @@ public class CustomHashMap {
     }
 
     public void insert(int key, int val){
+        if(numberOfItems >=  capacity / 2){
+            resize();
+        }
         var index = findIndex(key);
         var newNode = new Block(key, val);
         var currBlock = blocks[index];
@@ -20,14 +21,12 @@ public class CustomHashMap {
             currBlock.addLast(newNode);
         }
         numberOfItems++;
-        if(numberOfItems >=  capacity / 2){
-            capacity *= 2;
-            resize();
-        }
+
     }
 
     private void resize(){
         var oldBlocks = blocks;
+        capacity *= 2;
         numberOfItems = 0;
         blocks = new Block[capacity];
         for(var block : oldBlocks){
@@ -52,6 +51,8 @@ public class CustomHashMap {
     }
 
     public void display(){
+        System.out.println("Total number of blocks:" + blocks.length);
+        System.out.println("Total number of items: " + numberOfItems);
         for(int i = 0; i < blocks.length; ++i){
             var curr = blocks[i];
             if(curr == null) continue;
