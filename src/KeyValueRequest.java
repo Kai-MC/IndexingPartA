@@ -1,9 +1,14 @@
+/**
+ * Represents the user input class, has parameters such as key, value and operation type.
+ */
 public class KeyValueRequest {
+    // member variables
     private int key;
     private Integer value;
 
     private OperationType operationType;
 
+    //getters
     public int getKey() {
         return key;
     }
@@ -16,7 +21,6 @@ public class KeyValueRequest {
         return operationType;
     }
 
-
     public KeyValueRequest(int key, Integer value, OperationType operationType){
         this.key = key;
         this.value = value;
@@ -24,6 +28,9 @@ public class KeyValueRequest {
     }
 }
 
+/**
+ * This enum represents the actions user can choose while interacting with the app.
+ */
 enum OperationType{
     LOOKUP,
     INSERT,

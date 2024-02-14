@@ -1,7 +1,10 @@
+/**
+ * Represents the single block in the indexing structure. Essentially a node class.
+ */
 public class Block {
     public int key;
     public int val;
-    public Block next;
+    public Block next; //pointer to the next block
 
     public Block(int key, int val){
         this.key = key;
@@ -9,11 +12,15 @@ public class Block {
         this.next = null;
     }
 
+    /**
+     * Adds block at the end of the LinkedList. is used in hashmap to handle collisions
+     * @param block
+     */
     public void addLast(Block block){
         var curr = this;
-        while(next != null){
+        while(next != null){ //traverse to the end of the list
             curr = curr.next;
         }
-        curr.next = block;
+        curr.next = block; // insert node.
     }
 }
