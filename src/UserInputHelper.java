@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 /**
  * Helper class to manage user input and convert it to a type that Java app can easily handle
+ * Yukai Ma  002472067
+ * Alexander Khoperia 002750203
  */
 public class UserInputHelper {
     /**

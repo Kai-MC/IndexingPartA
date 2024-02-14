@@ -1,5 +1,7 @@
 /**
  * Custom indexing structure: Dynamically resized hashmap to hold key-value pairs in memory.
+ * Yukai Ma  002472067
+ * Alexander Khoperia 002750203
  */
 public class CustomHashMap {
     private static int capacity = 16; // initial capacity

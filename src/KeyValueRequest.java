@@ -1,5 +1,7 @@
 /**
  * Represents the user input class, has parameters such as key, value and operation type.
+ * Yukai Ma  002472067
+ * Alexander Khoperia 002750203
  */
 public class KeyValueRequest {
     // member variables

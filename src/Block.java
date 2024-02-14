@@ -1,5 +1,7 @@
 /**
  * Represents the single block in the indexing structure. Essentially a node class.
+ * Yukai Ma  002472067
+ * Alexander Khoperia 002750203
  */
 public class Block {
     public int key;
